@@ -2,5 +2,5 @@ numpy
 pandas 
 scikit-learn
 matplotlib-pyplot
+seaborn
 prophet
-plotly
