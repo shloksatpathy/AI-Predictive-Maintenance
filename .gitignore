@@ -1,5 +1,6 @@
 venv/
 *.csv
 __pycache__/
-*.ipynb
+testingntrials/
 *.xlsx
+results/
