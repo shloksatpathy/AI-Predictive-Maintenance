@@ -7,7 +7,7 @@ data = pd.read_csv(r"C:\AI-Predictive-Maintenance\memory\out.csv")
 
 data.dropna()
 
-features = [[ "memory_usage_pct", "rolling_std_24h", "growth_rate", "acceleration"]]
+features = [ "memory_usage_pct", "rolling_std_24h", "growth_rate", "acceleration"]
 
 X = data[features]
 
@@ -26,5 +26,5 @@ scores = model.decision_function(X_scaled)
 data["anomaly_score"] = -scores
 
 data["ts"] = pd.to_datetime(data["ts"], format='mixed').dt.tz_localize(None)
-data.to_excel("anomaly_result.xlsx")
+data.to_csv("anomaly_result.csv")
 
